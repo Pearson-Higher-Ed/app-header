@@ -45,6 +45,7 @@ $o-header-z-index: 1000 !default;
 /// Responsive breakpoints
 
 // Phone
+$o-header-phone-xs-max: 320px !default;
 $o-header-phone-sm-max: 479px !default;
 $o-header-phone-min: $o-header-phone-sm-max + 1 !default;
 $o-header-phone-max: 767px !default;

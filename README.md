@@ -252,7 +252,7 @@ to manage them.
 
 ### Demo
 
-The following npm script will build the component, fire up a webpack dev server at localhost:8080/demo, and hot reload 
+The following npm script will build the component, fire up a webpack dev server at localhost:8081/demo, and hot reload
 any saved changes to the source without having to refresh the browser.
 
 	npm install

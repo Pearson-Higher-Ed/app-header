@@ -11,4 +11,8 @@
 	@media (min-width: $o-header-desktop-min) {
 		height: $o-header-height;
 	}
+
+    @media (max-width: $o-header-phone-xs-max) {
+        padding: 0 7px;
+    }
 }
