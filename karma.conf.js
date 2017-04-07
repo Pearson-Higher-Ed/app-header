@@ -1,6 +1,8 @@
 /*global module, process*/
 'use strict';
 
+var webpackConfig = require("./webpack.config");
+
 module.exports = function(config) {
 	config.set({
 
@@ -10,7 +12,7 @@ module.exports = function(config) {
 
 		// frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-		frameworks: ['mocha', 'sinon', 'browserify'],
+		frameworks: ['mocha', 'sinon'],
 
 
 		// list of files / patterns to load in the browser
@@ -29,38 +31,38 @@ module.exports = function(config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'test/*.test.js': ['browserify']
+			'test/*.test.js': ['webpack']
 		},
 
 
-		// browserify preprocessor options
-		browserify: {
-			debug: true,
-			transform: [
-				require('browserify-istanbul')({
-					ignore: ['node_modules/**', 'test/**', '**/lib/**', 'build/**', 'npm_scripts/**']
-				}),
-				require('textrequireify').create({
-					rootDirectory: process.cwd()
-				})]
-		},
+        webpack: {
+            devtool: 'inline-source-map',
+			module: webpackConfig.module
+        },
 
 
 		// test results reporter to use
 		// possible values: 'dots', 'progress'
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
-		reporters: ['progress', 'coverage'],
+		reporters: ['progress', 'coverage-istanbul'],
 
+        coverageIstanbulReporter: {
+			reports: ['html', 'lcovonly', 'text-summary'],
+			dir: "build/reports/coverage",
+			fixWebpackSourcePaths: true,
+			'report-config': {
+				html: {
+					subdir: 'html'
+                }
 
-		// coverage reporter options
-		coverageReporter: {
-			dir : 'build/reports/coverage',
-			reporters: [
-				{ type: 'lcovonly', subdir: '.', file:'coverage.lcov' },
-				{ type: 'html', subdir: 'report-html' }
-			]
-		},
-
+            },
+			thresholds: {
+                statements: 100,
+                lines: 100,
+                branches: 100,
+                functions: 100
+            }
+        },
 
 		// web server port
 		port: 9876,
