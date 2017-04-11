@@ -5,9 +5,6 @@
 If you are consuming version 1.0.0+ of app-header, you must consume the Elements SDK, as it is a required dependency. It
 is looking for the /fonts assets in the root of your served application.
 
-app-header 2.0.0+ makes use of several png files that are contained within the repository.  In order for the images to
-render in your application, you must store them in a folder called images.  
-
 Assumption: You have Node v4+ and npm 2+ installed.
 
 	> npm i --save @pearson-components/app-header

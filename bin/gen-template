@@ -29,6 +29,7 @@ function main(argv) {
       'var elementClose = incrementalDom.elementClose;',
       'var elementVoid = incrementalDom.elementVoid;',
       'var text = incrementalDom.text;',
+      'var images = require("./images-factory");',
       '',
       'module.exports = template;',
       '\n'
