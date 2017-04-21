@@ -7,6 +7,8 @@ module.exports = {
    dist: ['./main.js']
   },
   output: {
+    library: true,
+    libraryTarget: 'commonjs2',
     path: './',
     filename: 'build/[name].app-header.js'
   },
