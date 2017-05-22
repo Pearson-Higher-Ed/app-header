@@ -62,6 +62,11 @@
 	color: $pe-color-digital-pearson-blue;
 	white-space: nowrap;
 	outline-offset: -2px;
+
+	&:hover {
+		color: $pe-color-ink-blue;
+		text-decoration: none;
+	}
 }
 
 .o-dropdown-menu__menu-item > button {
