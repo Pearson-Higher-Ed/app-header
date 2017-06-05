@@ -1,0 +1,16 @@
+{
+  "name": "pearson-components-app-header",
+  "description": "Global responsive header for Pearson applications.",
+  "main": "./build/dist.app-header.js",
+  "keywords": [
+    "pearson-components",
+    "app-header"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pearson-Higher-Ed/app-header.git"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
