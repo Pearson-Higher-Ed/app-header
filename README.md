@@ -137,7 +137,7 @@ Creates a new instance of `AppHeader`.
 | links                    | `object`               | Links in the user dropdown. Refer to the [Links](#links) section for the default list  |
 | mode                     | `string`               | The mode. Refer to the [Modes](#modes) section for a list of supported modes and options. |
 
-
+It is in this `options` object that you change the URLs and names of the links, including the home link. The name of the home link should be "Pearson [name of your application] home". y default it is just "home".
 
 ```js
 var AppHeader = require('@pearson-components/app-header');
