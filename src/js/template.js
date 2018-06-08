@@ -20,14 +20,22 @@ function template (data, handlers, translate) {
         if (data.mode === 'Basic' || data.mode === 'Legacy Course') {
           elementOpen("a", null, null, "href", data.links.home)
             elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
+            if (!data.logo) {
               elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
+            } else {
+              elementOpen("img", null, null, "src", data.logo, "alt", translate('Pearson - Home'))
+            }
               elementClose("img")
             elementClose("div")
           elementClose("a")
         }
         if (data.mode ==='Signed Out' || data.mode === 'Integration') {
           elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
+          if (!data.logo) {
             elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
+          } else {
+            elementOpen("img", null, null, "src", data.logo, "alt", translate('Pearson - Home'))
+          }
             elementClose("img")
           elementClose("div")
         }
