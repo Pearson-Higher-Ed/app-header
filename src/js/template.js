@@ -17,17 +17,18 @@ function template (data, handlers, translate) {
   elementOpen("div", null, ["class", "o-header__container"])
     elementOpen("section", null, ["class", "o-header__section"])
       elementOpen("div", null, ["class", "o-header__brand"])
+      var logo = data.logo ? data.logo : images.logoLarge;
         if (data.mode === 'Basic' || data.mode === 'Legacy Course') {
           elementOpen("a", null, null, "href", data.links.home)
             elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
-              elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
+            elementOpen("img", null, null, "src", logo, "alt", translate('Pearson - Home'))
               elementClose("img")
             elementClose("div")
           elementClose("a")
         }
         if (data.mode ==='Signed Out' || data.mode === 'Integration') {
           elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
-            elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
+            elementOpen("img", null, null, "src", logo, "alt", translate('Pearson - Home'))
             elementClose("img")
           elementClose("div")
         }
