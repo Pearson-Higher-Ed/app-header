@@ -17,19 +17,30 @@ function template (data, handlers, translate) {
   elementOpen("div", null, ["class", "o-header__container"])
     elementOpen("section", null, ["class", "o-header__section"])
       elementOpen("div", null, ["class", "o-header__brand"])
-      var logo = data.logo ? data.logo : images.logoLarge;
         if (data.mode === 'Basic' || data.mode === 'Legacy Course') {
           elementOpen("a", null, null, "href", data.links.home)
             elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
-            elementOpen("img", null, null, "src", logo, "alt", translate('Pearson - Home'))
-              elementClose("img")
+              if (!data.logo) {
+                elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
+                elementClose("img")
+              }
+              if (data.logo) {
+                elementOpen("img", null, null, "src", data.logo, "alt", translate('Pearson - Home'))
+                elementClose("img")
+              }
             elementClose("div")
           elementClose("a")
         }
         if (data.mode ==='Signed Out' || data.mode === 'Integration') {
           elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
-            elementOpen("img", null, null, "src", logo, "alt", translate('Pearson - Home'))
-            elementClose("img")
+            if (!data.logo) {
+              elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
+              elementClose("img")
+            }
+            if (data.logo) {
+              elementOpen("img", null, null, "src", data.logo, "alt", translate('Pearson - Home'))
+              elementClose("img")
+            }
           elementClose("div")
         }
       elementClose("div")
@@ -90,14 +101,14 @@ function template (data, handlers, translate) {
               elementOpen("div", null, ["class", "o-dropdown-menu o-dropdown-menu--right o-app-header__menu-menu"])
                 elementOpen("button", null, ["type", "button", "class", "o-dropdown-menu__toggle", "id", "header-nav-link-account", "data-toggle", "dropdown-menu", "aria-haspopup", "true", "aria-expanded", "false"])
                   elementOpen("span", null, ["id", "o-app-header-user-menu-label", "class", "o-app-header--sr-only"])
-                    text("" + (translate('User account menu')) + "")
+                    text("" + (translate('User account')) + "")
                   elementClose("span")
                   elementOpen("span", null, ["class", "o-app-header__username o-app-header--truncate o-header__viewport-tablet--visible o-header__viewport-desktop--visible"])
                     text("" + (data.user.givenName) + "")
                   elementClose("span")
                   elementOpen("span", null, ["class", "o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden"])
                     elementOpen("i")
-                      elementOpen("img", null, ["class", "hover-image"], "src", images.personHoverNormal, "alt", translate('User account menu'))
+                      elementOpen("img", null, ["class", "hover-image"], "src", images.personHoverNormal)
                       elementClose("img")
                     elementClose("i")
                   elementClose("span")

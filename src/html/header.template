@@ -5,13 +5,23 @@
 				<if condition="data.mode === 'Basic' || data.mode === 'Legacy Course'">
 					<a href="{data.links.home}">
 						<div class="o-header__logo o-header__logo--pearson">
+						<if condition="!data.logo">
 							<img src="{images.logoLarge}" alt="{translate('Pearson - Home')}">
+						</if>
+						<if condition="data.logo">
+							<img src="{data.logo}" alt="{translate('Pearson - Home')}">
+						</if>
 						</div>
 					</a>
 				</if>
 				<if condition="data.mode ==='Signed Out' || data.mode === 'Integration'">
 					<div class="o-header__logo o-header__logo--pearson">
+					<if condition="!data.logo">
 						<img src="{images.logoLarge}" alt="{translate('Pearson - Home')}">
+					</if>
+					<if condition="data.logo">
+						<img src="{data.logo}" alt="{translate('Pearson - Home')}">
+					</if>
 					</div>
 				</if>
 			</div>
