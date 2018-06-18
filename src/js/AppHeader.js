@@ -41,7 +41,8 @@ AppHeader.defaultSettings = {
 		termsOfUse: '{consoleBaseUrl}/account/manage/tos',
 		privacyPolicy: '{consoleBaseUrl}/account/manage/privacy'
 	},
-	logo: '',
+	company_logo: '',
+	app_logo: '',
 	menu: {
 		// showAllCoursesMenuItem: false
 	},

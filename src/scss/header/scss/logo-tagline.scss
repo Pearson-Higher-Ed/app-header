@@ -18,8 +18,8 @@
 }
 
 .o-header__logo--pearson {
-	width: 123px;
-	padding-top: 15%;
+	width: 350px;
+	padding-top: 6%;
 	background-position: right ($o-header-height-mobile - $o-header-sprite-height) / 2;
 
 	@media (min-width: $o-header-desktop-min) {
@@ -34,6 +34,12 @@
 	@media (max-width: $o-header-phone-max) {
 		height: 30px;
 	}
+	margin-right: 20px;
+}
+
+.logo-seperator{
+	border-right: solid #ccc 1px;
+	padding-right: 13px;
 }
 
 .o-header__tagline {
