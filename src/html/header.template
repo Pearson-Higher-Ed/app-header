@@ -13,6 +13,7 @@
 							<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
 						</if>
 						<if condition="!data.company_logo && data.app_logo">
+						<img class="logo-seperator" src="{images.logoLarge}" alt="{translate('Pearson - Home')}">
 							<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
 						</if>
 						<if condition="data.company_logo && !data.app_logo">
