@@ -31,6 +31,8 @@ function template (data, handlers, translate) {
                 elementClose("img")
               }
               if (!data.company_logo && data.app_logo) {
+                elementOpen("img", null, ["class", "logo-seperator"], "src", images.logoLarge, "alt", translate('Pearson - Home'))
+                elementClose("img")
                 elementOpen("img", null, null, "src", data.app_logo, "alt", translate('Pearson - Home'))
                 elementClose("img")
               }
@@ -54,6 +56,8 @@ function template (data, handlers, translate) {
               elementClose("img")
             }
             if (!data.company_logo && data.app_logo) {
+              elementOpen("img", null, ["class", "logo-seperator"], "src", images.logoLarge, "alt", translate('Pearson - Home'))
+              elementClose("img")
               elementOpen("img", null, null, "src", data.app_logo, "alt", translate('Pearson - Home'))
               elementClose("img")
             }
