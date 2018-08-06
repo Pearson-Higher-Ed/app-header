@@ -136,7 +136,8 @@ Creates a new instance of `AppHeader`.
 | consoleBaseUrl           | `string`               | The consuming application base URL (default: https://console.pearson.com) |
 | links                    | `object`               | Links in the user dropdown. Refer to the [Links](#links) section for the default list  |
 | mode                     | `string`               | The mode. Refer to the [Modes](#modes) section for a list of supported modes and options. |
-| logo                     | `string`               | Logo in the left side of the header (default: Pearson logo) |
+| company_logo             | `string`               | default: Pearson logo |
+| app_logo                 | `string`               | The application logo |
 
 
 ```js
@@ -145,9 +146,14 @@ var appHeader = new AppHeader({ mode: 'Signed Out', showLoginControls: false });
 ```
 ### Logo
 
-Pass an online url for the property "logo" as an object, and it will replace the default Pearson logo (preferred).
+Pass the url's for the property "company_logo" and "app_logo" as an object, and they will replace the default Pearson logo (preferred).
 
-`logo: 'http://...'`
+- `company_logo`: a string with the url for the company logo image.
+- `app_logo` : a string with the url for the application logo image.
+
+When only the application logo is added, the default Pearson logo will be added along with the application logo image.
+
+The `height` property of both logos should be 37px.
 
 ### Methods
 
