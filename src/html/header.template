@@ -13,8 +13,14 @@
 							<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
 						</if>
 						<if condition="!data.company_logo && data.app_logo">
-						    <img class="logo-seperator" src="{images.logoLarge}" alt="{translate('Pearson - Home')}">
+							<span class="o-header__viewport-tablet--visible o-header__viewport-desktop--visible">
+							<img class="logo-seperator" src="{images.logoLarge}" alt="{translate('Pearson - Home')}">
 							<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
+							</span>
+							<span class="o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden">
+								<img class="logo-seperator" src="{images.pearsonIcon}" alt="{translate('Pearson - Home')}">
+								<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
+							</span>
 						</if>
 						<if condition="data.company_logo && !data.app_logo">
 							<img src="{data.company_logo}" alt="{translate('Pearson - Home')}">
@@ -32,8 +38,14 @@
 							<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
 						</if>
 						<if condition="!data.company_logo && data.app_logo">
-						    <img class="logo-seperator" src="{images.logoLarge}" alt="{translate('Pearson - Home')}">
-							<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
+							<span class="o-app-header--truncate o-header__viewport-tablet--visible o-header__viewport-desktop--visible">
+								<img class="logo-seperator" src="{images.logoLarge}" alt="{translate('Pearson - Home')}">
+								<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
+							</span>
+							<span class="o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden">
+								<img class="logo-seperator" src="{images.pearsonIcon}" alt="{translate('Pearson - Home')}">
+								<img src="{data.app_logo}" alt="{translate('Pearson - Home')}">
+							</span>
 						</if>
 						<if condition="data.company_logo && !data.app_logo">
 							<img src="{data.company_logo}" alt="{translate('Pearson - Home')}">
