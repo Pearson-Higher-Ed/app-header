@@ -18,10 +18,10 @@
 }
 
 .o-header__logo--pearson {
-	width: 123px;
-	padding-top: 15%;
+	//padding-top: 15%;
 	background-position: right ($o-header-height-mobile - $o-header-sprite-height) / 2;
-
+	vertical-align: middle;
+    display: table-cell;
 	@media (min-width: $o-header-desktop-min) {
 		background-position: right ($o-header-height - $o-header-sprite-height) / 2;
 	}
@@ -34,6 +34,13 @@
 	@media (max-width: $o-header-phone-max) {
 		height: 30px;
 	}
+}
+
+.logo-seperator{
+	box-sizing: border-box;
+	border-right: 1px solid #ccc;
+	padding-right: 10px;
+    margin-right: 10px;
 }
 
 .o-header__tagline {
