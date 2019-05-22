@@ -1,5 +1,4 @@
 @import 'node_modules/pearson-elements/scss/elements/color/_variables';
-
 .o-header {
 	box-sizing: border-box;
 }
@@ -62,4 +61,40 @@
 
 .o-header__section--right {
 	float: right;
+}
+
+.o-header__nav-item {
+	@media(max-width:768px) {
+		padding:0 !important;
+	}
+}
+.o-header__container {
+	@media(max-width:768px) {
+		display:flex;
+		justify-content: space-between;
+	}
+}
+.o-header__viewport-tablet--hidden {
+	@media(max-width:768px) {
+		display:flex;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.o-header__nav-items {
+	@media(max-width:768px) {
+		display:flex;
+	}
+}
+.o-header__brand {
+	@media(max-width:768px) {
+		margin-right:50px;
+	}
+}
+#header-nav-link-account {
+	@media(max-width:768px) {
+		margin-right:0;
+		padding-right:0;
+	}
 }
