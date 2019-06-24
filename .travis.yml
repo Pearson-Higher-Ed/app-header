@@ -2,17 +2,8 @@ language: node_js
 sudo: false
 node_js:
 - 6
-- 4
 script:
 - npm run ci
-- chmod 777 ./node_modules/@pearson-components/npm-scripts/shell_scripts/run_selenium_ci_tests.sh
-- export TEST_GROUP=desktop-regression
-- ./node_modules/@pearson-components/npm-scripts/shell_scripts/run_selenium_ci_tests.sh
-after_success:
-- cat ./build/reports/coverage/coverage.lcov | node_modules/coveralls/bin/coveralls.js
-after_failure:
-- for file in *.log; do echo $file; echo "======================"; cat $file; done
-  || true
 deploy:
   provider: npm
   email: pearson-design-accelerator@pearson.com
