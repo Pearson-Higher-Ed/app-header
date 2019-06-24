@@ -52,36 +52,38 @@ function template (data, handlers, translate) {
           elementClose("a")
         }
         if (data.mode ==='Signed Out' || data.mode === 'Integration') {
-          elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
-            if (!data.company_logo && !data.app_logo) {
-              elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
-              elementClose("img")
-            }
-            if (data.company_logo && data.app_logo) {
-              elementOpen("img", null, ["class", "logo-seperator"], "src", data.company_logo, "alt", translate('Pearson - Home'))
-              elementClose("img")
-              elementOpen("img", null, null, "src", data.app_logo, "alt", translate('Pearson - Home'))
-              elementClose("img")
-            }
-            if (!data.company_logo && data.app_logo) {
-              elementOpen("span", null, ["class", "o-app-header--truncate o-header__viewport-tablet--visible o-header__viewport-desktop--visible"])
-                elementOpen("img", null, ["class", "logo-seperator"], "src", images.logoLarge, "alt", translate('Pearson - Home'))
+          elementOpen("a", null, null, "href", data.links.home)
+            elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
+              if (!data.company_logo && !data.app_logo) {
+                elementOpen("img", null, null, "src", images.logoLarge, "alt", translate('Pearson - Home'))
+                elementClose("img")
+              }
+              if (data.company_logo && data.app_logo) {
+                elementOpen("img", null, ["class", "logo-seperator"], "src", data.company_logo, "alt", translate('Pearson - Home'))
                 elementClose("img")
                 elementOpen("img", null, null, "src", data.app_logo, "alt", translate('Pearson - Home'))
                 elementClose("img")
-              elementClose("span")
-              elementOpen("span", null, ["class", "o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden"])
-                elementOpen("img", null, ["class", "logo-seperator"], "src", images.pearsonIcon, "alt", translate('Pearson - Home'))
+              }
+              if (!data.company_logo && data.app_logo) {
+                elementOpen("span", null, ["class", "o-app-header--truncate o-header__viewport-tablet--visible o-header__viewport-desktop--visible"])
+                  elementOpen("img", null, ["class", "logo-seperator"], "src", images.logoLarge, "alt", translate('Pearson - Home'))
+                  elementClose("img")
+                  elementOpen("img", null, null, "src", data.app_logo, "alt", translate('Pearson - Home'))
+                  elementClose("img")
+                elementClose("span")
+                elementOpen("span", null, ["class", "o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden"])
+                  elementOpen("img", null, ["class", "logo-seperator"], "src", images.pearsonIcon, "alt", translate('Pearson - Home'))
+                  elementClose("img")
+                  elementOpen("img", null, null, "src", data.app_logo, "alt", translate('Pearson - Home'))
+                  elementClose("img")
+                elementClose("span")
+              }
+              if (data.company_logo && !data.app_logo) {
+                elementOpen("img", null, null, "src", data.company_logo, "alt", translate('Pearson - Home'))
                 elementClose("img")
-                elementOpen("img", null, null, "src", data.app_logo, "alt", translate('Pearson - Home'))
-                elementClose("img")
-              elementClose("span")
-            }
-            if (data.company_logo && !data.app_logo) {
-              elementOpen("img", null, null, "src", data.company_logo, "alt", translate('Pearson - Home'))
-              elementClose("img")
-            }
-          elementClose("div")
+              }
+            elementClose("div")
+          elementClose("a")
         }
       elementClose("div")
     elementClose("section")
