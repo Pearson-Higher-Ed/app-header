@@ -28,14 +28,6 @@
 
 }
 
-.o-header__logo--pearson img {
-	height: 37px;
-
-	@media (max-width: $o-header-phone-max) {
-		height: 30px;
-	}
-}
-
 .logo-seperator{
 	box-sizing: border-box;
 	border-right: 1px solid #ccc;
