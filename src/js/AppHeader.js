@@ -43,6 +43,7 @@ AppHeader.defaultSettings = {
 	},
 	company_logo: '',
 	app_logo: '',
+	register: false,
 	menu: {
 		// showAllCoursesMenuItem: false
 	},

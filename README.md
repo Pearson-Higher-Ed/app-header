@@ -138,6 +138,8 @@ Creates a new instance of `AppHeader`.
 | mode                     | `string`               | The mode. Refer to the [Modes](#modes) section for a list of supported modes and options. |
 | company_logo             | `string`               | default: Pearson logo |
 | app_logo                 | `string`               | The application logo |
+| register                 | `boolean`              | To change 'Sign In' to 'Sign in or Register' |
+
 
 
 ```js
@@ -154,6 +156,11 @@ Pass the url's for the property "company_logo" and "app_logo" as an object, and 
 When only the application logo is added, the default Pearson logo will be added along with the application logo image.
 
 The `height` property of both logos should be 37px.
+
+### 'Sign In'
+If the 'Sign In' wording needs to be changed to 'Sign in or Register' the boolean property `register` is passed as `true`
+
+Default `register` is false
 
 ### Methods
 
