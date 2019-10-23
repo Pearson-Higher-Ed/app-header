@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var config = {
     session: 'session',
 		user: { givenName: 'Sign in' },
+    app_logo: "http://via.placeholder.com/150x37",
 		mode: 'Basic',
 		onLogin: function () {
 			alert('You signed in');

@@ -248,7 +248,7 @@ describe('AppHeader:', function () {
 
 			var logoEl = getLogoEl(appHeaderEl);
 
-			expect(logoEl.parentElement.tagName.toLowerCase()).to.not.be('a');
+			expect(logoEl.parentElement.tagName.toLowerCase()).to.be('a');
 		});
 
 		it('should emit oAppHeader.login when the mode is \'Signed Out\' and the sign in nav item is clicked', function (done) {
@@ -475,7 +475,7 @@ describe('AppHeader:', function () {
 
 			var logoEl = getLogoEl(appHeaderEl);
 
-			expect(logoEl.parentElement.tagName.toLowerCase()).to.not.be('a');
+			expect(logoEl.parentElement.tagName.toLowerCase()).to.be('a');
 		});
 
 		it('should hide the menu nav item when the mode is \'Integration\'', function () {
