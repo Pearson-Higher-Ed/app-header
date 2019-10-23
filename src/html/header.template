@@ -86,7 +86,14 @@
 					</li>
 					<li class="{data.menuNavItemClasses}">
 						<if condition="data.mode === 'Signed Out' && data.showLoginControls">
-							<a href="#" onclick="{handlers.handleLogin($event)}">{translate('Sign In')}</a>
+							<a href="#" onclick="{handlers.handleLogin($event)}">
+								<if condition="data.register">
+									{translate('Sign in or Register')}
+								</if>
+								<if condition="!data.register">
+									{translate('Sign In')}
+								</if>
+							</a>
 						</if>
 
 						<if condition="data.mode === 'Basic' || data.mode === 'Legacy Course'">

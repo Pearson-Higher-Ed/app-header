@@ -136,7 +136,16 @@ function template (data, handlers, translate) {
           elementOpen("li", null, null, "class", data.menuNavItemClasses)
             if (data.mode === 'Signed Out' && data.showLoginControls) {
               elementOpen("a", null, ["href", "#"], "onclick", function ($event) {handlers.handleLogin($event)})
-                text("" + (translate('Sign In')) + "")
+                if (data.register) {
+                  text(" \
+                  									" + (translate('Sign in or Register')) + " \
+                  								")
+                }
+                if (!data.register) {
+                  text(" \
+                  									" + (translate('Sign In')) + " \
+                  								")
+                }
               elementClose("a")
             }
             if (data.mode === 'Basic' || data.mode === 'Legacy Course') {
