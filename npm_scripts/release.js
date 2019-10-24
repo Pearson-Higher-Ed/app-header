@@ -42,7 +42,7 @@ stdin.question(`Next version (current is ${currentVersion})? `, (nextVersion) =>
   }
 
   // Ensure unit tests pass before continuing!
-  exec('npm test');
+
 
   // Order of operations:
   // 1. Bump the version update in package.json and npm-shrinkwrap.json
