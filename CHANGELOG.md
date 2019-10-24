@@ -1,3 +1,8 @@
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/Pearson-Higher-Ed/app-header/compare/v2.2.0...v2.3.0) (2019-10-24)
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](https://github.com/Pearson-Higher-Ed/app-header/compare/v2.1.2...v2.2.0) (2019-10-24)
 
