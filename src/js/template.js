@@ -95,10 +95,10 @@ function template (data, handlers, translate) {
           elementOpen("li", null, ["class", "o-header__nav-item o-app-header__nav-item-help"])
             if (!data.help) {
               elementOpen("a", null, ["href", "#", "id", "header-nav-link"], "onclick", function ($event) {handlers.handleHelpNavItemClick($event)})
-                elementOpen("i")
-                  elementOpen("img", null, ["class", "hover-image"], "src", images.helpHoverNormal, "alt", translate('help'))
-                  elementClose("img")
-                elementClose("i")
+                elementOpen("svg", null, ["id", "help-24", "viewbox", "0 0 18 18"])
+                  elementOpen("path", null, ["d", "M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M9.5,9 C9.77614237,9 10,8.77614237 10,8.5 C10,7.67157288 10.6715729,7 11.5,7 L13.5,7 C14.3284271,7 15,7.67157288 15,8.5 L15,8.96514743 C15,9.66379825 14.5023959,10.2633745 13.8157115,10.3921278 C12.1830812,10.698246 11,12.1237716 11,13.7848526 L11,14.5 C11,14.7761424 11.2238576,15 11.5,15 L12.5,15 C12.7761424,15 13,14.7761424 13,14.5 L13,13.7848526 C13,13.0862017 13.4976041,12.4866255 14.1842885,12.3578722 C15.8169188,12.051754 17,10.6262284 17,8.96514743 L17,8.5 C17,6.56700338 15.4329966,5 13.5,5 L11.5,5 C9.56700338,5 8,6.56700338 8,8.5 C8,8.77614237 8.22385763,9 8.5,9 L9.5,9 Z M11.5,17 C11.2238576,17 11,17.2238576 11,17.5 L11,18.5 C11,18.7761424 11.2238576,19 11.5,19 L12.5,19 C12.7761424,19 13,18.7761424 13,18.5 L13,17.5 C13,17.2238576 12.7761424,17 12.5,17 L11.5,17 Z"])
+                  elementClose("path")
+                elementClose("svg")
               elementClose("a")
             }
             if (typeof data.help === 'string') {
