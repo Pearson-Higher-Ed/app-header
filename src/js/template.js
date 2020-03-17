@@ -96,7 +96,7 @@ function template (data, handlers, translate) {
             if (!data.help) {
               elementOpen("a", null, ["href", "#", "id", "header-nav-link"], "onclick", function ($event) {handlers.handleHelpNavItemClick($event)})
                 elementOpen("div", null, ["class", "hover-svg", "style", "height:20px; width: 22px; display:flex; align-items:center"])
-                  elementOpen("svg", null, ["xmlns", "http://www.w3.org/2000/svg", "height", "24", "viewbox", "0 0 24 24", "width", "24", "style", "transform:scale(0.8)"])
+                  elementOpen("svg", null, ["xmlns", "http://www.w3.org/2000/svg", "height", "24", "viewbox", "0 0 24 24", "width", "24", "style", "transform:scale(0.9)"])
                     elementOpen("path", null, ["d", "M0 0h24v24H0z", "fill", "none"])
                     elementClose("path")
                     elementOpen("path", null, ["d", "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"])
@@ -164,7 +164,7 @@ function template (data, handlers, translate) {
                   elementOpen("span", null, ["class", "o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden"])
                     elementOpen("i")
                       elementOpen("div", null, ["class", "hover-svg", "style", "height:20px; width: 22px; display:flex; align-items:center"])
-                        elementOpen("svg", null, ["xmlns", "http://www.w3.org/2000/svg", "height", "24", "viewbox", "0 0 24 24", "width", "24", "style", "transform:scale(0.8)"])
+                        elementOpen("svg", null, ["xmlns", "http://www.w3.org/2000/svg", "height", "24", "viewbox", "0 0 24 24", "width", "24", "style", "transform:scale(0.9)"])
                           elementOpen("path", null, ["d", "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"])
                           elementClose("path")
                           elementOpen("path", null, ["d", "M0 0h24v24H0z", "fill", "none"])
