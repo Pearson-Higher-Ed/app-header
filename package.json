@@ -41,7 +41,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "~1.6.0",
     "mocha": "^2.1.0",
-    "node-sass": "^3.13.1",
+    "node-sass": "^4.13.1",
     "pearson-elements": "^1.14.16",
     "phantomjs-polyfill": "0.0.2",
     "sass-loader": "^3.1.2",
