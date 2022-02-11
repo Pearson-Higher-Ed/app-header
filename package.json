@@ -30,7 +30,7 @@
     "expect.js": "^0.3.1",
     "file-loader": "^0.8.5",
     "istanbul-instrumenter-loader": "^2.0.0",
-    "karma": "^0.12.31",
+    "karma": "^6.3.14",
     "karma-chrome-launcher": "^0.2.0",
     "karma-coverage": "^0.2.6",
     "karma-coverage-istanbul-reporter": "^1.0.0",
