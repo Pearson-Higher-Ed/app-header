@@ -1,8 +1,8 @@
 {
   "name": "@pearson-components/app-header",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Global responsive header for Pearson applications.",
-  "main": "./main.js",
+  "main": "./build/dist.app-header.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build": "webpack",
