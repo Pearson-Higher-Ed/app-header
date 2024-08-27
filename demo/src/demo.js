@@ -1,7 +1,7 @@
 /*global require, alert, console*/
 'use strict';
 
-require('../../node_modules/pearson-elements/scss/elements.scss');
+require('../../node_modules/@pearson-components/elements-sdk/src/styles/elements.scss');
 require('./demo.scss');
 
 var AppHeader = require('../../main');

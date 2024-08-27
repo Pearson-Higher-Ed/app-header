@@ -19,11 +19,11 @@
 
 .o-header__logo--pearson {
 	//padding-top: 15%;
-	background-position: right ($o-header-height-mobile - $o-header-sprite-height) / 2;
+	background-position: right ($o-header-height-mobile - $o-header-sprite-height) * 0.5;
 	vertical-align: middle;
     display: table-cell;
 	@media (min-width: $o-header-desktop-min) {
-		background-position: right ($o-header-height - $o-header-sprite-height) / 2;
+		background-position: right ($o-header-height - $o-header-sprite-height) * 0.5;
 	}
 
 }
@@ -42,9 +42,9 @@
 
 .o-header__tagline--always-learning {
 	width: 170px;
-	background-position: left ($o-header-height-mobile - $o-header-sprite-height) / 2;
+	background-position: left ($o-header-height-mobile - $o-header-sprite-height) * 0.5;
 
 	@media (min-width: $o-header-desktop-min) {
-		background-position: left ($o-header-height - $o-header-sprite-height) / 2;
+		background-position: left ($o-header-height - $o-header-sprite-height) * 0.5;
 	}
 }

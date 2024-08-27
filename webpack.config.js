@@ -1,28 +1,36 @@
 // [name] under the output section denotes the entry prop names
+const path = require('path');
+const demo = `${__dirname}/demo/src/demo.js`;
+const demoCSS = `${__dirname}/demo/src/demo.scss`;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-   dev_demo: ['webpack/hot/dev-server', './demo/src/demo.js'],
-   dev_bundle: ['webpack/hot/dev-server', './demo/src/bundle-eventing.js', './main.js'],
+   dev_demo: [ demo, demoCSS ],
+   dev_bundle: ['./demo/src/bundle-eventing.js', './main.js'],
    dist: ['./main.js']
   },
   output: {
-    path: './',
-    filename: 'build/[name].app-header.js'
+    path: path.resolve(__dirname, 'build'),
+    filename: '[name].app-header.js',
+    publicPath : '/'
   },
-  contentBase: "./demo", // for webpack dev server
-  module: {
-    loaders: [
+  devServer : {
+    static : {
+      directory : path.join(__dirname, 'demo'),
+      publicPath : '/'
+    }
+  },
+  module : {
+    rules : [
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        use : [{ loader: 'css-loader' },{ loader: 'sass-loader' }]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          'url-loader'
-        ]
+        use: [ { loader: 'url-loader' } ]
       }
     ]
-  }
+  },
 };

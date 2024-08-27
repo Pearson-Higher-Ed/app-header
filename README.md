@@ -1,5 +1,5 @@
-# app-header [![Build Status](https://travis-ci.org/Pearson-Higher-Ed/app-header.svg?branch=master)](https://travis-ci.org/Pearson-Higher-Ed/app-header) ![node release](https://img.shields.io/badge/Node-6-green.svg)
-
+## Deprecated support
+Updated to support Node 20 in v3
 
 ## Usage
 

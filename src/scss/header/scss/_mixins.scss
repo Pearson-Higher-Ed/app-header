@@ -1,8 +1,8 @@
-@import 'node_modules/pearson-elements/scss/elements/color/_variables';
+@import '../../../../node_modules/@pearson-components/elements-sdk/src/styles/elements/color/_variables';
 
 @mixin nav-link {
 	display: block;
-	padding: (($o-header-height-mobile - $o-header-nav-link-line-height) / 2) $o-header-nav-link-padding;
+	padding: (($o-header-height-mobile - $o-header-nav-link-line-height) * 0.5) $o-header-nav-link-padding;
 	line-height: 18px;
 	text-decoration: none;
 	color: $pe-color-medium-gray;

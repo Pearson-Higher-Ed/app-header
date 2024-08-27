@@ -19,26 +19,26 @@
 	.o-header__logo--pearson,
 	.o-header__tagline--always-learning {
 		background-clip: content-box;
-		padding: (($o-header-height-mobile - $o-header-sprite-height) / 2) 0;
+		padding: (($o-header-height-mobile - $o-header-sprite-height) * 0.5) 0;
 
 		@media (min-width: $o-header-desktop-min) {
-			padding: (($o-header-height - $o-header-sprite-height) / 2) 0;
+			padding: (($o-header-height - $o-header-sprite-height) * 0.5) 0;
 		}
 	}
 
 	.o-header__logo--pearson {
-		background-position: right (($o-header-height-mobile - $o-header-sprite-height) / 2) - $o-header-sprite-height;
+		background-position: right (($o-header-height-mobile - $o-header-sprite-height) * 0.5) - $o-header-sprite-height;
 
 		@media (min-width: $o-header-desktop-min) {
-			background-position: right (($o-header-height - $o-header-sprite-height) / 2) - $o-header-sprite-height;
+			background-position: right (($o-header-height - $o-header-sprite-height) * 0.5) - $o-header-sprite-height;
 		}
 	}
 
 	.o-header__tagline--always-learning {
-		background-position: left (($o-header-height-mobile - $o-header-sprite-height) / 2) - $o-header-sprite-height;
+		background-position: left (($o-header-height-mobile - $o-header-sprite-height) * 0.5) - $o-header-sprite-height;
 
 		@media (min-width: $o-header-desktop-min) {
-			background-position: left (($o-header-height - $o-header-sprite-height) / 2) - $o-header-sprite-height;
+			background-position: left (($o-header-height - $o-header-sprite-height) * 0.5) - $o-header-sprite-height;
 		}
 	}
 

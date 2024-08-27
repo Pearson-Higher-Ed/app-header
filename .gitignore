@@ -3,6 +3,7 @@
 .sass-cache/
 node_modules/
 build/*.js
+build/*.txt
 build/reports
 fonts
 demo/elements.css
